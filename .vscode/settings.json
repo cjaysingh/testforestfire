@@ -6,6 +6,7 @@
         "predicdata",
         "predictdata",
         "SQLALCHEMY",
-        "werkzeug"
+        "werkzeug",
+        "WSGI"
     ]
 }

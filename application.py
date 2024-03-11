@@ -52,11 +52,18 @@ def predict_datapoint():
         result=ridge_model.predict(new_data_scaled)
         
         return render_template('home.html',results=result[0])
+    
+    
     else:
         return render_template('home.html')
+    
+@app.errorhandler(404)
+def invalid_route(e):
+    return render_template('404.html'), 404
 
 if __name__=='__main__':
-    application.run(host='0.0.0.0')
+    application.run(host='0.0.0.0', debug=True)
+
 
 
 
